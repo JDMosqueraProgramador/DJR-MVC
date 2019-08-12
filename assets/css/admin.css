@@ -1,0 +1,261 @@
+nav{
+    box-shadow: 0 5px 15px darkgray;
+    margin-bottom: 20px;
+}
+.menu a{
+    font-family: Georgia;
+    color: darkgray;
+    font-size: 20px;
+}
+.menu a i{
+    font-size: initial;
+}
+
+.menu li > a:hover{
+    color:#270355; 
+}
+.menu li:hover{
+    transform: translate(-2px, -2px);
+    box-shadow: 0px 0px 1px #270355;
+}
+
+section{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2{
+    font-size: 1.44141rem;
+    font-weight: 600;
+}
+
+/* diseño crud */
+
+.equipo_crud{
+    max-width: 100%;
+    height: 30px;
+    margin: 10px;
+    border-bottom: #270355 solid 1px;
+}
+.equipo_crud span{
+    padding: 10px;
+}
+
+.editar{
+    margin: 0 3px 0 3px;
+    background: #270355;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 5px;
+}
+
+.eliminar{
+    background: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 5px;
+}
+
+.edit_equipos {
+    max-width: 90%;
+    padding: 20px 10% 20px 10%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.edit_equipos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../imagenes/chilena.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.edit_equipos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.781);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.edit_equipos .titulo{
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    justify-content: center;
+    text-align: center;
+}
+
+/* botones de la derecha */
+
+.btns_torneo{
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.btns_torneo div{
+    text-align: center;
+    padding: 15px;
+    height: 50%;
+    width: 60%;
+    margin: auto;
+}
+a.btn-admin{
+    padding: 10px;
+    margin: 30px auto 0 auto;
+    display: block;
+}
+
+.btn-admin{
+    min-width: 100%;
+    font-weight: 600;
+    color: white;
+    background: transparent;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 10px #450797;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.btn-v > *{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #e90052;
+}
+
+.btn-admin::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #1c033d;
+    z-index: -1;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.btn-admin::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #450797;
+    z-index: -1;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.btn-admin:hover{
+    border-color: #450797;
+}
+
+.btn-admin:hover::before{
+    width: 0;
+}
+.btn-admin:hover::after{
+    width: 100%;
+}
+
+fecha{
+    display: block;
+    font-size: 10px;
+    color: #1c033d;
+}
+
+.text-tt{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0px 1px 0px rgb(190, 190, 190), 0px 2px 0px rgb(185, 185, 185), 0px 3px 0px rgb(180, 180, 180), 0px 4px 0px rgb(175, 175, 175), 0px 5px 0px rgb(170, 170, 170), 0px 6px 0px rgb(165, 165, 165), 0px 1px 5px rgba(0, 0, 0, 0.5), 0px 3px 5px rgba(0, 0, 0, 0.10), 0px 5px 10px rgba(0, 0, 0, 0.15), 0px 7px 10px rgba(0, 0, 0, 0.20);
+
+}
+
+/* partidos no jugados */
+
+.partido-aplazar{
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    max-width: 350px;
+    margin: 30px auto;
+    box-shadow: 0 0 10px violet;
+}
+.partido-aplazar fecha{
+    position: absolute;
+    bottom: -50%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+.partido-aplazar::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(28, 3, 61, 0.822);
+    mix-blend-mode: color;
+    transition: 1s;
+    border-radius: 10px 0 0 10px;
+}
+
+.partido-aplazar::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #b076fc;
+    mix-blend-mode: color;
+    transition: 1s;
+    border-radius: 0 10px 10px 0;
+}
+
+.partido-aplazar:hover::before{
+    width: 50%;    
+}
+.partido-aplazar:hover::after{
+    width: 50%;
+}
+.partido-aplazar:hover{
+    color: white;
+}
+
+.resultado-hoy{
+    background: #5613f7;
+    color: wheat;
+    border-radius: 20px;
+}
+
+.resultado-hoy .equipo,.partido-aplazar .equipo{
+    display: inline-block;
+    max-width: 100px;
+    width: 100%;
+}
+

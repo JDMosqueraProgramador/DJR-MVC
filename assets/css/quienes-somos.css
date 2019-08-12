@@ -1,0 +1,155 @@
+
+.bandw{
+    margin-top: 20px;
+    width: 100%;
+    min-height: 500px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+.bandw .white, .bandw .black{
+    box-shadow: 0px 0px 1px rgba(128, 128, 128, 0.719);
+
+    padding: 120px 40px 120px 40px;
+}
+.black{
+    background: black;
+    color: white;
+}
+
+.pointerbaw{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: white;
+    background-size: cover;
+    pointer-events: none;
+    mix-blend-mode: difference;
+
+}
+
+section{
+    width: fit-content;
+    margin: auto;
+    padding: 50px;
+}
+
+.card-qs{
+    width: 360px;
+    height: 480px;
+    margin: 10px;
+    background: black;
+    overflow: hidden;
+    position: relative;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 5px black;
+}
+.card-qs:hover ~ section{
+    background: black;
+}
+
+.card-qs::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(38, 38, 38, 0.443);
+}
+.card-qs .imagen{
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.card-qs .imagen img{
+    width: 100%;
+    transition: 1s;
+
+}
+
+.card-qs:hover .imagen img{
+    opacity: 0.5;
+    transform: translateX(30%);
+}
+
+.card-qs .informacion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: #270355;
+    transition: 1s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.card-qs:hover .informacion{
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.card-qs .informacion .contenido{
+    padding: 20px;
+    text-align: center;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-qs .informacion .contenido h2{
+    color: #270355;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card-qs .informacion .contenido h2 span{
+    font-size: 14px;
+}
+
+.card-qs .informacion .contenido p{
+    margin: 10px 0;
+    color: #262626;
+}
+
+.card-qs .informacion .contenido ul{
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+}
+
+.card-qs .informacion .contenido ul li{
+    float: left;
+}
+
+.card-qs .informacion .contenido ul li a{
+    display: block;
+    border-radius: 5px;
+    background: #262626;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+.card-qs .informacion .contenido ul li a:hover{
+    background: #ff3636;
+}
+
+
+
+
+

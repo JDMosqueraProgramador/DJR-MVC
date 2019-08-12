@@ -1,0 +1,36 @@
+
+.removeEvent{
+    text-align: center;
+}
+
+td a{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: red;
+}
+
+#edit_partido{
+    background: white;
+}
+
+form div > div{
+    width: 45%;
+    display: inline-block;
+}
+form div > div:nth-child(1){
+    text-align: left;
+}
+form div > div:nth-child(2){
+    text-align:right;
+}
+
+vs{
+    display: inline-block;
+}
+
+input[type='submit']{
+    width: 80%;
+}

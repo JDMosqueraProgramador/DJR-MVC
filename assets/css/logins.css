@@ -1,0 +1,293 @@
+
+
+.nuev-prog{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: solid 3px rgba(165, 165, 165, 0.712);
+    background: black;
+    background-size: 100% 100%; 
+    color: #5a586e;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all .5s;
+    z-index: 100;
+}
+
+.top-o{
+    top: 0 !important;
+}
+
+.nuev-prog i{
+    font-size: 50px;
+    margin-right: 30px;
+    margin-top: 10px;
+    border-radius: 100%;
+}
+.nuev-prog i:hover{
+    animation: rot 1s linear 1;
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.nuev-prog fieldset{
+    width: 32%;
+    margin: 10em auto 10em auto;
+    padding: 40px;
+    background: #eef0f4;
+    font-family: Cooper Black;
+    border-radius: 20px;
+ }
+ 
+ .nuev-prog select{
+     padding: 2px 25px 2px 25px;
+     border: none;
+     color: #5a586e;
+     background: transparent;
+     border-bottom: solid 1px #fff;
+     outline: none;
+ }
+ 
+ .nuev-prog input{
+     padding: 2px 30px 2px 30px;
+     border: none;
+     color: #5a586e;
+     background: transparent;
+     border-bottom: solid 1px #fff;
+     outline: none;
+ }
+select:-webkit-autofill:hover,
+input:-webkit-autofill:hover, 
+textarea:-webkit-autofill:hover,
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:focus {
+  /* border: 1px solid #5a586e; */
+  -webkit-text-fill-color: #5a586e;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(69, 7, 151, 0.11) inset;
+}
+
+select:-webkit-autofill::selection,
+input:-webkit-autofill::selection, 
+textarea:-webkit-autofill::selection{
+    -webkit-text-fill-color: white;
+}
+
+
+ .nuev-prog input[type=submit]{
+     color: #eef0f4;
+     background: black;
+     outline: none;
+     border-radius: 10px;
+    transition: 0.5s;
+ }
+ 
+
+ 
+ .nuev-prog input[type=submit]:hover{
+     box-shadow: 1px 1px 10px black;    
+     color: wheat;
+     border: none;
+ }
+
+ @media only screen and (max-width: 900px){
+    .nuev-prog fieldset,
+    .pag-1 fieldset
+    {
+        width: 50% !important;
+    }
+    .nuev-prog select{
+        padding: 0;
+    }
+ }
+
+ @media only screen and (max-width: 500px){
+    .nuev-prog fieldset,
+    .pag-1 fieldset
+    {
+        width: 90% !important;
+    }
+ }
+
+
+
+
+
+.inputBox{
+    position: relative;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    outline: none;
+    transition: .5s;
+}
+
+.inputBox label{
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    pointer-events: none;
+    text-align: left;
+    
+}
+
+.inputBox input:focus{
+    border-bottom: #450797 solid 2px;
+}
+
+.inputBox input:focus ~ label{
+    top: -20px;
+    color: #450797;
+    font-size: 13px;
+}
+
+.inputBox .select-grado{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: solid 0.5px #450797;
+    outline:  none;
+    color: white;
+
+}
+
+.inputBox .select-grado option{
+    padding: 5px 2px;
+    background:#450797;
+    color: white;
+
+}
+
+
+.focus{
+    top: -20px !important;
+    color: #450797;
+    font-size: 13px !important;
+}
+
+
+.pag-1{
+    background: url(../imagenes/g-h.jpg);
+    background-size: 100%;
+}
+
+.pag-1 input[type=submit]{
+    background: #450797;
+    border-color: #450797;
+    font-family: Cooper Black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.pag-1 input[type=submit]:hover{
+    color: #450797;
+    border-color: #450797;
+}
+
+.pag-1 fieldset{
+    width: 25%;
+    margin: 8em auto 8em auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    border-radius: 10%;
+    background: #d5d7dab7;
+}
+
+
+
+/*////// cajas footer //////*/
+
+
+.informacion-footer{
+
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom:0px;
+    background: #270355;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.informacion-footer a{
+    padding: 5px;
+    color: #fff;
+}
+
+.informacion-footer .caja{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 10px;
+    background: #270355;
+    color: #fff;
+}
+
+.informacion-footer .caja .icon{
+    width: 100%;
+    height: 100%;
+    background: #270355;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(0) rotateX(0deg); 
+}
+
+.informacion-footer .caja:hover .icon{
+    transform: translateY(100%) rotateX(90deg); 
+}
+
+.informacion-footer .caja i{
+    font-size: 4em;
+    line-height: 1.5em;
+}
+
+.informacion-footer .caja .detalles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #200841;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translateY(-100px) rotateX(90deg); 
+
+}
+
+.informacion-footer .caja:hover .detalles{
+    transform: translateY(0) translateX(0);
+}
+
+.informacion-footer .detalles{
+    font-size: 15px;
+    line-height: 100px;
+}

@@ -1,0 +1,287 @@
+nav {
+  box-shadow: 0px 5px 5px rgba(161, 160, 160, 0.658);
+  padding: 25px;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: black;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #45079767;
+}
+
+fieldset {
+  margin: 10px auto 50px auto;
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+}
+
+.circleClass {
+  shape-outside: circle(60px at 50px 50px);
+  float: left;
+  margin-right: 100px;
+}
+
+.parrafo {
+  padding: 0 100px 0 100px;
+  text-align: left;
+}
+.col-c5 {
+  padding: 20px;
+}
+
+.col-c6 {
+  padding: 10% 0 0 0;
+}
+.col-a7 input {
+  height: 30px;
+  width: 40%;
+  margin: auto;
+  border-radius: 3px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: black;
+  border-bottom: solid 2px #450797;
+  margin-bottom: 50px;
+}
+
+
+.sesion1 label {
+  font-weight: 700;
+  text-align: center;
+  color: rgb(170, 166, 166);
+  top: -10px !important;
+  cursor: pointer;
+}
+
+.inputBox input:focus ~ label {
+  top: -30px !important;
+  color: #450797 !important;
+}
+
+label i {
+  font-size: 50px;
+}
+label img {
+  width: 50%;
+  height: auto;
+}
+
+label.focus {
+  top: -30px !important;
+  color: #450797 !important;
+}
+
+fieldset button {
+  margin-top: 40px;
+  margin-right: 30px;
+  padding: 0.375rem 0.75rem;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 15px;
+  outline: none;
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?);
+}
+
+
+.jug-eq input {
+  border-radius: 3px;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 95%;
+  border-bottom: solid 2px #450797;
+}
+
+.jug-eq {
+  box-shadow: 0px 0px 2px #450797;
+  padding: 20px;
+
+}
+
+.jug-eq thead{
+   background: #450797;
+   border-radius: 10px;
+   color: white;
+  }
+
+.jug-eq td {
+  padding: 10px;
+}
+
+.terminos{
+    display: flex;
+    padding: 10%;
+    flex-wrap: wrap;
+}
+
+.sesion1 {
+  box-shadow: 0px 5px 5px rgba(161, 160, 160, 0.658);
+  padding: 10px 10px 35px 10px;
+}
+
+section{
+    margin: 50px 0 50px 0;
+}
+section p{
+    font-size: 15px;
+    font-weight: 800;
+    padding: 20px;
+}
+
+footer{
+    box-shadow: 0px 5px 5px rgba(161, 160, 160, 0.658);
+    padding: 20px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 800;
+    background: black;
+    position: fixed;
+    color: white;
+    text-align: center;
+    bottom: 0;
+}
+footer a{
+    transition: 1s;
+    display: inline-block;
+    padding: 10px;
+    font-size: 15px;
+    margin: 0 5px 0 5px;
+    color: gray;
+}
+
+footer a:hover{
+    transform: translate(-5px, -5px);
+    color: white;
+    box-shadow: 0px 0px 1px white;
+}
+
+.vequipo span{
+  color: red;
+  font-size: 15px;
+  padding: 10px;
+}
+
+input[type="submit"]{
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px black;
+  background: white;
+  transition: 1s;
+}
+
+input[type="submit"]:hover{
+  box-shadow: 0px 0px 2px white;
+  color: white;
+  background: black;
+}
+
+.mas-jugadores{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(58, 58, 58, 0.699);
+  top: -1000px;
+  transition: 2s;
+  z-index: 10;
+  padding: 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+.mas-jugadores form input{
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  border-radius: 5px;
+  border: solid 2px white;
+  color: white;
+}
+
+.mas-jugadores form input[type="submit"]{
+  padding: 0;
+  background: white;
+  width: 80%;
+  color: black;
+  font-weight: 900;
+  height: 30px;
+}
+.mas-jugadores form{
+  max-width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.mas-jugadores i{
+  font-size: 50px;
+}
+.mas-jugadores i:hover{
+  animation: rot 2s 1;
+}
+
+
+.btn-aggjug{
+  background: transparent;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black; 
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.btn-aggjug::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: #450797;
+  z-index: -1;
+  border-radius: 10px;
+  transition: 1s;
+}
+.btn-aggjug::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+ .btn-aggjug:hover:before{
+  width: 100% !important;
+}
+.btn-aggjug:hover::after{
+  width: 0;
+}

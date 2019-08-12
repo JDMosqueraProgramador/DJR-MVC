@@ -1,0 +1,138 @@
+.calendario-completo{
+    width: 98%;
+    height: fit-content;
+    margin: 50px auto 50px auto;
+    padding: 20px;
+    border: solid 1px grey;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mes{
+    display: none;
+}
+
+.t-mes{
+    background: #450797;
+    color: white;
+    box-shadow: 0px 0px 1px black;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.semanas{
+    max-width: 100%;
+    width: 100%;
+}
+
+.semanas thead th{
+    max-width: 200px;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.semanas thead th:nth-child(6n + 1){
+    color: brown;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+}
+
+.semanas tbody td{
+    padding: 5px;
+    max-width: 200px;
+    width: 14.4%;
+    max-height: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 1px black;
+    overflow: hidden;
+    position: relative;
+
+}
+.semanas tbody td:nth-child(6n + 1){
+    background: #450797;
+    color: white;
+
+}
+
+.semanas tbody td span{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.pass_cal{
+    width: 200px;
+    margin: auto;
+}
+
+.pass_cal button{
+    width: 48%;
+    padding: 5px;
+    margin: 5px 0;
+    background: #450797;
+    color: white;
+    border: solid 1px #450797;
+}
+
+.vs{
+    background: black;
+    color: white;
+    border-radius: 100%;
+}
+
+.partido{
+    border-radius: 10px;
+    background: #450797;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+
+}
+
+.estadisticas{
+    color: #e90052;    
+    display: none;
+    z-index: 2;
+    border-radius: 20px;
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.685);
+}
+
+.estadisticas table td{
+    max-width: 150px;
+    width: 150px;
+    padding: 10px 20px;
+    text-align: center;
+}
+.estadisticas img{
+    max-height: 60px;
+}
+#close{
+    position: absolute;
+    bottom: 90%; 
+    left: 95%;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+

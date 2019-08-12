@@ -1,0 +1,108 @@
+.card{
+    position: relative;
+    width: 300px;
+    margin: 30px auto 30px auto;
+}
+
+.card .delante, .delante2, .delante1{
+    width: 100%;
+    height: 100%;
+    background: #0dadad;
+    padding: 30px;
+    transition: 0.5s;
+    transform-origin: right;
+}
+
+.desempeño{
+    font-weight: bold;
+    width: 50%;
+    text-align: left;
+    float: left;
+    color: #fff;
+}
+.info, .info1, .info2{
+    width: 50%;
+    text-align: right;
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    color: #fff;
+    display: block;
+
+}
+.escudo{
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+.escudo img{
+    /* width: 100%; */
+    max-height: 100px;
+}
+
+.escudo span{
+    font-size: 20px;
+    color: #fff;
+}
+
+.datos{
+    margin: 0;
+    padding: 0;
+}
+
+.datos li{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.705);
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.datos li:last-child{
+    border-bottom: none;
+}
+
+.datos li .atributo{
+    width: 50%;
+}
+.datos li .valor{
+    width: 50%;
+    text-align: right;
+}
+
+.card .atras, .card .atras2, .card .atras1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: rgb(119, 0, 255);
+    transform-origin: left;
+    transition: 0.5s; 
+    transform: translateX(100%) rotateY(90deg);
+}
+.delante.active-r, .delante2.active-r, .delante1.active-r{
+    transform: translateX(0) rotateY(0deg);
+}
+
+.delante, .delante2, .delante1{
+    transform: translateX(-100%) rotateY(90deg);
+}
+
+.atras.active-r, .atras2.active-r, .atras1.active-r{
+    transform: translateX(0) !important;
+    transform: rotateY(0);
+}
+
+.go-back, .go-back1, .go-back2{
+    font-size: 24px;
+    color: #fff;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+

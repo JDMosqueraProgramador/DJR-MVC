@@ -1,0 +1,334 @@
+.links_equipos{
+    max-width: 600px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    margin: 30px auto;
+    position: relative;
+}
+
+.equipoBtn{
+    padding: 10px 0 10px 0;
+    font-weight: 700;
+    color: grey;
+    margin: 15px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.equipoBtn img{
+    width: 30px;
+    transform: translate(0, -5px);
+}
+
+.equipoBtn._error{
+    height: 300px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    color: gray;
+    font-weight: 900;
+    font-size: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.equipoBtn._error span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.giro{
+    text-align: center;
+    justify-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+}
+
+.circulo-l{
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: perspective(1000px); */
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin: auto;
+    border-radius: 100%;
+    border: black solid 2px;
+    animation: girar 6s infinite;
+}
+
+@keyframes girar{
+    100%{
+        transform: rotateY(360deg) rotateZ(360deg);
+    }
+}
+.circulo-l div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    border: black 2px solid;
+    border-radius: 100%;
+}
+
+.circulo-l div:nth-child(1){
+    transform: rotateY(30deg) ;
+}
+
+.circulo-l div:nth-child(2){
+    transform: rotateY(60deg) ;
+}
+.circulo-l div:nth-child(3){
+    transform: rotateY(90deg) ;
+}
+.circulo-l div:nth-child(4){
+    transform: rotateY(120deg) ;
+}
+.circulo-l div:nth-child(5){
+    transform: rotateY(150deg);
+}
+.circulo-l img{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 50%);
+    opacity: 0.1;
+}
+
+.info-equipo{
+    margin: 20px auto;
+    border: solid 0.5px gray;
+    padding: 40px; 
+    border-radius: 20px;
+}
+
+.cabeza{
+    background: #270355;
+    color: white;
+    position: relative;
+    border-radius: 30px 30px 0 0;
+    padding: 10px;
+}
+
+.nombreEquipo{
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 20px;
+    line-height: 100px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 
+        0px 1px 0px rgb(190, 190, 190),
+        0px 2px 0px rgb(185, 185, 185),
+        0px 3px 0px rgb(180, 180, 180),
+        0px 4px 0px rgb(175, 175, 175),
+        0px 5px 0px rgb(170, 170, 170),
+        0px 6px 0px rgb(165, 165, 165),
+
+        0px 1px 5px rgba(0, 0, 0, 0.5),
+        0px 3px 5px rgba(0, 0, 0, 0.10),
+        0px 5px 10px rgba(0, 0, 0, 0.15),
+        0px 7px 10px rgba(0, 0, 0, 0.20);
+}
+
+
+.cabeza img{
+    max-width: 100px;
+}
+.info-jugadores thead th{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.info-jugadores th, .info-jugadores td{
+    background: rgb(4, 0, 12);
+    color: wheat;
+    padding: 15px;
+    /* border-radius: 30px; */
+    box-shadow: -3px -3px 20px gray;
+}
+
+section h1{
+    color: rgb(224, 224, 224);
+    text-align: center;
+    text-shadow: 
+        0px 1px 0px rgb(190, 190, 190),
+        0px 2px 0px rgb(185, 185, 185),
+        0px 3px 0px rgb(180, 180, 180),
+        0px 4px 0px rgb(175, 175, 175),
+        0px 5px 0px rgb(170, 170, 170),
+        0px 6px 0px rgb(165, 165, 165),
+
+        0px 1px 5px rgba(0, 0, 0, 0.5),
+        0px 3px 5px rgba(0, 0, 0, 0.10),
+        0px 5px 10px rgba(0, 0, 0, 0.15),
+        0px 7px 10px rgba(0, 0, 0, 0.20);
+}
+
+.encuentros h1 span{
+    font-size: 20px;
+    color: white;
+} 
+
+d3{
+    display: block;
+    position: relative;
+    transform-style: preserve-3d;
+    max-width: 300px;
+    height: 30px;
+    text-align: center;
+    transition: 0.5s;
+    margin: 20px auto;
+    
+}
+d3 div{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    position: absolute;
+    box-shadow: 0px 0px 10px #270355;
+    transition: 1s;
+    transform-origin: bottom;
+
+}
+
+d3:hover div:nth-child(2){
+    transform: rotateX(0);
+}
+
+d3:hover div:nth-child(1){
+    transform: rotateX(90deg);
+}
+
+d3 div:nth-child(2){
+    background: #270355;
+    color: wheat;
+    transform: rotateX(90deg);
+}
+
+.resultado{
+    max-width: 350px;
+    display: flex;
+    margin: 20px auto;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.resultado::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    transition: 0.5s;
+    z-index: -1;
+    border-radius: 20px; 
+}
+
+.resultado::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(1, 2, 53);
+    transition: 0.5s;
+    z-index: -1;
+    border-radius: 20px; 
+}
+
+.resultado:hover::before{
+    width: 50%;
+    border-radius: 10px; 
+}
+
+.resultado:hover::after{
+    width: 50%;
+    border-radius: 10px; 
+}
+
+.resultado:hover{
+    color: white;
+}
+.resultado span{
+    padding: 5px;
+    width: 50%;
+}
+.marcador{
+    display: flex;
+    padding: 5px;
+    color: white;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+fecha{
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: solid 1px grey;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 30px;
+    background: #740aff;
+    color: white;
+    font-size: 10px;
+    position: relative;
+}
+fecha::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: rgb(101, 5, 255);
+}
+
+.estadistics{
+    padding: 20px;
+    position: relative;
+    margin: 60px auto;
+    width: 80%;
+    border: solid 15px #270355;
+}
+.t-esta{
+    text-align: center;
+    background: white;
+    position: absolute;
+    color: #270355;
+    bottom: 95%;
+    left: 50%;
+    padding: 10px;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.estadistics table{
+    margin: auto;
+}
+.estadistics table td, .estadistics table th{
+    padding: 20px;
+}
+.estadistics table th{
+    text-align: right;
+}
+
+
+
+
