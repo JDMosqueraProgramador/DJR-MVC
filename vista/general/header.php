@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/diseño.css">
     <link rel="stylesheet" href="assets/css/cubo.css">
     <link rel="stylesheet" href="assets/css/logins.css">
-    <link rel="stylesheet" href="assets/css/all.css">
+    <!-- <link rel="stylesheet" href="assets/css/all.css"> -->
     <link rel="icon" href="assets/imagenes/jesusrey.jpg">
     <?php
     if(isset($linksStyles) && !empty($linksStyles)){

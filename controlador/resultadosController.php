@@ -122,7 +122,6 @@ class Resutados extends BD{
                         <img src='assets/$datos_l[1]'>
                         <span>$datos_l[0]</span>";
     
-    
                         if($jug_e_l->rowCount() > 0){
                             while($anotadoresl = $jug_e_l->fetch()){
                                 echo "<div class='anot'>".$anotadoresl['nombreJugador']." ".$anotadoresl['apellidosJugador']."(".$anotadoresl['numeroGoles'].")</div>";

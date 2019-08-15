@@ -6,9 +6,15 @@ if($_GET['editar'] && !empty($_GET['editar'])){
     require 'controlador/equiposController.php';
 ?>
 
+<script>
+
+var idEquipo = <?php echo $id_equipo ?>;
+
+</script>
+
 <div class='editJugador' style='top: -100vh; transition: 1s'>
     <form action='' method='post'>
-        <a class='derecha' onclick="classNames('editJugador')[0].style.top = '0'"><i class='fas fa-times-circle pointer'></i></a>
+        <a class='derecha' onclick="classNames('editJugador')[0].style.top = '-100vh'"><i class='fas fa-times-circle pointer'></i></a>
         <h1>Editar jugador</h1>
         <input type='text' name='nombreNuevo' id='nombreNuevo' value=''><br>
         <input type='text' name='apellidosNuevo' id='apellidosNuevo' value=''><br>
@@ -18,22 +24,9 @@ if($_GET['editar'] && !empty($_GET['editar'])){
     </form>
 </div>
 
-<script>
-
-    function editarJugador(name, apellidos, grado, idE){
-        id('nombreNuevo').value = name;
-        id('apellidosNuevo').value = apellidos;
-        id('grupoNuevo').value = grado;
-        id('idNuevo').value = idE;
-
-        classNames('editJugador')[0].style.top = '0';
-
-    }
-
-</script>
-
 <form action="" method="post" style="margin-bottom: 100px">
     <h1> <img src="<?php echo "assets/".$equipos->basicsEquipos()['escudo'] ?>" width="10%" class="izquierda">Modificar equipo <img src="<?php echo "assets/".$equipos->basicsEquipos()['escudo'] ?>" width="10%" class="derecha"></h1>
+
     <div class="equipo-general">
         <input type="text" name="nombreEquipo" value="<?php echo $equipos->basicsEquipos()['nombreEquipo']; ?>">
     </div>
@@ -41,22 +34,10 @@ if($_GET['editar'] && !empty($_GET['editar'])){
     <h2>Jugadores</h2> 
     <div class="inputs-jug">
 
-        <script>
-        document.addEventListener('DOMContentLoaded', crudJugadores("editar=<?php echo $id_equipo ?>"));
 
-        function crudJugadores(send){
-            ht = new XMLHttpRequest;
-            ht.addEventListener('readystatechange', function(){
-                if(this.readyState == 4 && this.status == 200){
-                    classNames('inputs-jug')[0].innerHTML = this.responseText;
-                    setTimeout(cerrarAlertAction, 5000);
-                }
-            });
-            ht.open('POST', 'controlador/ajax/jugadoresCRUD.php');
-            ht.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            ht.send(send);
-        }
-        
+
+        <script src="assets/js/ajax/jugadoresAjax.js"></script>
+        <script>
         </script>
 
     </div>   
@@ -82,47 +63,26 @@ if($_GET['editar'] && !empty($_GET['editar'])){
         <input type="text" id='newGrado' name="gradoNuevoJugador" placeholder="grado del jugador"><br>
         <input type="submit" value="Agregar" name="agrJug" >
 
-        <script>
-        
-        id('agrJug').addEventListener('submit', function(e){
-            e.preventDefault();
-            var nombre = id('newName').value,
-            apellidos = id('newLast').value,
-            grado = id('newGrado').value;
-
-            if(nombre != "" && apellidos != "" && grado != ""){
-                crudJugadores("editar=<?php echo $id_equipo ?>&nombre="+nombre+"&apellidos="+apellidos+"&grado="+grado);
-                mostrarEsaCosa();
-
-            }
-            
-    
-        });
-
-        function mostrarEsaCosa(){
-            var x = document.getElementsByClassName("agg")[0];
-            if(x.style.top == "-100vh"){
-                x.style.top = "0";
-            }else{
-                x.style.top = "-100vh";
-            }
-        }
-
-        function cerrarAlertAction(){
-            var alerts = classNames('alertAction');
-            for(let i = 0; i < alerts.length; i++){
-                alerts[i].style.opacity = "0";
-                setTimeout(function(){
-                    alerts[i].style.display = 'none';
-                    classNames('inputs-jug')[0].removeChild(alerts[i]);
-                    }, 1000)
-            }
-        }
-        </script>
     </form>
+
+    <script>
+    
+    id('agrJug').addEventListener('submit', function(e){
+        e.preventDefault();
+        var nombre = id('newName').value,
+        apellidos = id('newLast').value,
+        grado = id('newGrado').value;
+
+        if(nombre != "" && apellidos != "" && grado != ""){
+            crudJugadores("editar="+idEquipo+"&nombre="+nombre+"&apellidos="+apellidos+"&grado="+grado);
+            mostrarEsaCosa();
+
+        }
+    });
+    </script>
 </div> 
 
-
+<script src="assets/js/editarEquiposFuncions.js"></script>
 
 <?php
 }

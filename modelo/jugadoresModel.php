@@ -98,6 +98,7 @@ class JugadoresModel extends BD{
     public function updtJugador($name, $lastName, $grupo, $id){
         $conn = parent::conectar();
         try{
+            
             require_once '../functions.php';
             $name = segF($name);
             $lastName = segF($lastName);
