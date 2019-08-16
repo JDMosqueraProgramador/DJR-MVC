@@ -104,3 +104,17 @@ function menu_3(x) {
 	y.classList.add("active-link");
 }
 
+// Cerrar mensaje de acción #CRUD
+
+function cerrarAlertAction(){
+    var alerts = classNames('alertAction');
+    for(let i = 0; i < alerts.length; i++){
+        alerts[i].style.opacity = "0";
+        setTimeout(function(){
+            alerts[i].style.display = 'none';
+			alerts[i].remove();
+			
+            }, 1000);
+    }
+}
+

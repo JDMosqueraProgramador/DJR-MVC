@@ -6,10 +6,10 @@
             <form method="post" id="form-ev" action="editar/editar-partidos/agg-partido.isrt.php">
                 <h2>Crear Partido</h2><br>
                 <label for="fecha">Fecha:</label>
-                <input type="date" name="fecha" id="" style="display:none">
+                <input type="date" name="fecha" id="fechaNuevoPartido" style="display:none">
                 <span id="ver_fecha"></span><br><br><br>
                 <h3>Encuentro entre</h3><br>
-                <select name="equipo1">
+                <select name="equipo1" id='equipoLocal'>
                     <?php
                     $equiposConsult = $equiposModel->dataEquipo();
                     $equiposConsult2 = $equiposModel->dataEquipo();
@@ -23,7 +23,7 @@
                     ?>
                 </select>
                 vs
-                <select name="equipo2">
+                <select name="equipo2" id='equipoVisita'>
                     <?php
                     if($equiposConsult2->rowCount() > 0){
                         while($equipo2 = $equiposConsult2->fetch()){
@@ -46,7 +46,7 @@
             <form action="" method="post">
                 <h2>Editar partido</h2><br>
                 <label for="nuevafecha">Fecha:</label>
-                <input type="date" name="nuevafecha"><br><br>
+                <input type="date" name="nuevafecha" id='nuevaFecha'><br><br>
                 <h3>Encuentro entre</h3><br>
                 <div>
                     <div id='localMod'></div><vs>vs</vs><div id='visitaMod'></div><br><br>

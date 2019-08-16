@@ -15,8 +15,8 @@ class Partidos extends BD{
                 $nombreVisita = "SELECT nombreEquipo FROM equipos WHERE id_equipo = $id_eq_vist";
                 $nombreLocal = $conn->query($nombreLocal);
                 $nombreVisita = $conn->query($nombreVisita);
-                $nombreLocalF = $nombreLocal->fetch_row();
-                $nombreVisitaF = $nombreVisita->fetch_row();
+                $nombreLocalF = $nombreLocal->fetch();
+                $nombreVisitaF = $nombreVisita->fetch();
         
                 $momentos = explode("-", $fecha_partido['fechaPartido']); 
 

@@ -56,33 +56,36 @@ var mes_text = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 
             let dia_semana = fecha.getDay();
             if (dia == 1) {var sem = 0;}
             select_tabla.children[1].children[sem].children[dia_semana].innerText = dia;
+            select_tabla.children[1].children[sem].children[dia_semana].setAttribute('data-dia', dia);
 
             if(select_tabla.children[1].children[sem].children[dia_semana].innerText != "" && dia_semana != 0 && dia_semana != 6){
-                select_tabla.children[1].children[sem].children[dia_semana].addEventListener("click", crearEvento);
-
-                function crearEvento(){
-                    let r = document.getElementById('nuev-progr');
-                    r.style.top = "0";
-                    let f = document.getElementsByName('fecha')[0];
-
-                    let ver_fecha = document.getElementById('ver_fecha');
-                    ver_fecha.textContent = mes_text[mes] + " " + dia + " de " + año;
-                    var mes_env = mes+1;
-                    var dia_env = dia;
-
-                    if(mes_env.toString().length < 2){  mes_env = "0" + mes_env; }
-                    if(dia_env.toString().length < 2){ dia_env = "0" + dia; }
-                    f.setAttribute("value", año + "-" + mes_env + "-" + dia_env);
-                    var close = document.getElementById('close-ventana').addEventListener("click", function cerrar(){
-                        r.style.top = "-100vh";
-                    })
-                }
+                select_tabla.children[1].children[sem].children[dia_semana].setAttribute('onclick', "crearEvento("+año+","+mes+","+dia+")");
+                // select_tabla.children[1].children[sem].children[dia_semana].addEventListener("click", crearEvento(año, mes, dia));
+                
                 // MarcarFechas();
             }
             if (dia_semana == 6) { sem = sem + 1; }
 
         }
         
+    }
+
+    function crearEvento(año, mes, dia){
+        let r = document.getElementById('nuev-progr');
+        r.style.top = "0";
+        let f = document.getElementsByName('fecha')[0];
+
+        let ver_fecha = document.getElementById('ver_fecha');
+        ver_fecha.textContent = mes_text[mes] + " " + dia + " de " + año;
+        var mes_env = mes+1;
+        var dia_env = dia;
+
+        if(mes_env.toString().length < 2){  mes_env = "0" + mes_env; }
+        if(dia_env.toString().length < 2){ dia_env = "0" + dia; }
+        f.setAttribute("value", año + "-" + mes_env + "-" + dia_env);
+        var close = document.getElementById('close-ventana').addEventListener("click", function cerrar(){
+            r.style.top = "-100vh";
+        });
     }
 
     let tdsalv = document.getElementsByTagName('td');
@@ -97,3 +100,5 @@ var mes_text = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 
         var fecha = new Date(año, 0);
         return new Date(fecha.setDate(dia));
     }
+
+    
